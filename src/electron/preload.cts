@@ -7,7 +7,16 @@ electron.contextBridge.exposeInMainWorld("electron",{
         });
         
     },
+    subscribeChangeView:(callback)  => { 
+        return ipcOn("changeView",(stats) => {
+            callback(stats);
+        });
+        
+    },
     getStaticData: () => electron.ipcRenderer.invoke('getStaticData'),   
+    sendFrameAction: (payload) => {
+        ipcSend('sendFrameAction',payload);
+    }
 } satisfies Window['electron'])  
 
 
@@ -22,4 +31,11 @@ function ipcOn<Key extends keyof EventPayloadMapping>(
     const cb = (_:Electron.IpcRendererEvent,payload:any) => callback(payload);
     electron.ipcRenderer.on(key, cb);
     return ()=> electron.ipcRenderer.off(key, cb);
+}
+
+function ipcSend<Key extends keyof EventPayloadMapping>(
+    key: Key,
+    payload:EventPayloadMapping[Key]
+){      
+    electron.ipcRenderer.send(key, payload);
 }
