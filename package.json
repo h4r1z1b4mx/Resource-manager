@@ -19,13 +19,15 @@
   "dependencies": {
     "os-utils": "^0.0.14",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "recharts": "^2.15.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
     "@types/os-utils": "^0.0.4",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "@types/recharts": "^1.8.29",
     "@vitejs/plugin-react": "^4.4.1",
     "cross-env": "^7.0.3",
     "electron": "^36.3.2",
