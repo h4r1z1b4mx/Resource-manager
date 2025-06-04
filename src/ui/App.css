@@ -1,4 +1,8 @@
+.App{
+  height: 100vh;
+  width: 100vw;
 
+}
 header {
   width: 100%;
   text-align: right;
@@ -35,16 +39,14 @@ header button {
   gap: 1rem;
   align-items: center;
   margin: 1rem;
-  max-width: 980px;
-  margin: auto;
-  
-  margin-top: 4rem;
+  max-width: 900px;
+  margin: 10;
+  margin-top: 8rem;
 }
-
 
 .mainGrid {
   height: 10rem;
-  /* padding: 0.5rem; */
+  padding: 0.5rem;
 }
 
 .selectOption {

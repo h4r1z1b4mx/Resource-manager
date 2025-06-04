@@ -96,10 +96,7 @@ function SelectOption(props: {
 function Header() {
   return (
     <header>
-      <button
-        id="close"
-        onClick={() => window.electron.sendFrameAction('CLOSE')}
-      />
+    
       <button
         id="minimize"
         onClick={() => window.electron.sendFrameAction('MINIMIZE')}
@@ -107,6 +104,10 @@ function Header() {
       <button
         id="maximize"
         onClick={() => window.electron.sendFrameAction('MAXIMIZE')}
+      />
+        <button
+        id="close"
+        onClick={() => window.electron.sendFrameAction('CLOSE')}
       />
     </header>
   );

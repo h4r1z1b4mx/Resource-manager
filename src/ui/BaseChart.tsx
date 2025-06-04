@@ -9,11 +9,11 @@ import {
 
 type BaseChartProps = {
   data: { value: number | undefined }[];
-//   fill: string;
-//   stroke: string;
+  fill: string;
+  stroke: string;
 };
 
-export function     BaseChart(props: BaseChartProps) {
+export function BaseChart(props: BaseChartProps) {
   return (
     <ResponsiveContainer width={'100%'} height={'100%'}>
       <AreaChart data={props.data}>
